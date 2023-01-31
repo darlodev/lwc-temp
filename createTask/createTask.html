@@ -1,0 +1,19 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card variant="Narrow" title="New Task">
+        <lightning-layout class="slds-var-p-around_small" vertical-align="center">
+            <lightning-layout-item>
+                <p>- Enter the name of your new task.</p>
+                <p>- Click the 'plus' icon to add the task to your list.</p>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout class="slds-var-p-around_small" horizontal-align="space">
+            <lightning-layout-item size="8" class="slds-card_boundary">
+                <lightning-card variant="Narrow" title={textValue}>
+                    <lightning-button-icon variant="brand" slot="actions" icon-name="utility:add" onclick={createTask}></lightning-button-icon>
+                </lightning-card>
+                <lightning-input class="slds-var-p-around_small" placeholder="Task Name" onchange={handleInputChange}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
